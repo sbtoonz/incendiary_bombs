@@ -82,6 +82,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\BoomCountdown.cs">
+      <Link>MonoScripts\BoomCountdown.cs</Link>
+    </Compile>
     <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\ShaderReplacerNew.cs">
       <Link>MonoScripts\ShaderReplacerNew.cs</Link>
     </Compile>

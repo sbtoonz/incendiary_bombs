@@ -2478,7 +2478,7 @@ MonoBehaviour:
   m_hitWaterEffects:
     m_effectPrefabs: []
   m_respawnItemOnHit: 0
-  m_spawnOnHit: {fileID: 1163308556583957, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
+  m_spawnOnHit: {fileID: 1251349219302613472, guid: d9f863ce5e3acbd4aa42743a1fa6653e, type: 3}
   m_spawnOnHitChance: 1
   m_randomSpawnOnHit: []
   m_showBreakMessage: 0

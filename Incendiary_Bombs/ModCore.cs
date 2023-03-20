@@ -53,6 +53,7 @@ namespace Incendiary_Bombs
             PrefabManager.RegisterPrefab("boombs", "incendiary_projectile");
             
             PrefabManager.RegisterPrefab("boombs", "sticky_projectile");
+            PrefabManager.RegisterPrefab("boombs", "Lit_bomb");
         }
     }
 }
