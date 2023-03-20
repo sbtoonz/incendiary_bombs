@@ -1,4 +1,4 @@
-Shader "REPLACE_Custom/Piece" {
+Shader "Custom/Piece" {
 	Properties {
 		_Color ("Color", Vector) = (1,1,1,1)
 		_Cutoff ("Alpha Cutoff", Range(0, 1)) = 0
