@@ -42,6 +42,8 @@ public class BoomCountdown : MonoBehaviour, IProjectile
                     if (hit.gameObject.GetComponent<Rigidbody>())
                     {
                         this.transform.SetParent(hit.gameObject.transform);
+                        var pos =hit.GetComponentInChildren<MeshRenderer>().bounds.ClosestPoint(this.transform.position);
+                        this.transform.position = pos;
                     }
                 }
 
