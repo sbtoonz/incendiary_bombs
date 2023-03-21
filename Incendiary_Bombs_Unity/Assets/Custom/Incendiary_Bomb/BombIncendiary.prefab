@@ -2473,6 +2473,7 @@ GameObject:
   - component: {fileID: 114618531469673879}
   - component: {fileID: 199417327732020627}
   - component: {fileID: 198757180215073145}
+  - component: {fileID: 6950178859925555880}
   m_Layer: 12
   m_Name: BombIncendiary
   m_TagString: Untagged
@@ -2614,10 +2615,10 @@ MonoBehaviour:
         m_damage: 0
         m_blunt: 0
         m_slash: 0
-        m_pierce: 15
-        m_chop: 15
+        m_pierce: 0
+        m_chop: 0
         m_pickaxe: 0
-        m_fire: 15
+        m_fire: 0
         m_frost: 0
         m_lightning: 0
         m_poison: 0
@@ -5115,6 +5116,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &6950178859925555880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970116834525588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924c5f814fb20d1468491d08242a912f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_itemdrop: {fileID: 114618531469673879}
 --- !u!1 &1990150780692831
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class BoomCountdown : MonoBehaviour, IProjectile
     [SerializeField] internal Aoe? m_aoe_script;
     [SerializeField] internal Projectile? m_parent_projectile;
     [SerializeField] internal SnapToGround? m_snappable;
+    [SerializeField] internal bool isSticky;
     public float m_timeout = 1f;
     
     private void Awake()
@@ -22,7 +23,32 @@ public class BoomCountdown : MonoBehaviour, IProjectile
     private void OnEnable()
     {
         if (m_aoe_explosion_prefab != null) m_aoe_script = m_aoe_explosion_prefab.GetComponent<Aoe>();
-        m_snappable.Snap();
+        switch (isSticky)
+        {
+            case false:
+                m_snappable!.Snap();
+                break;
+            case true:
+            {
+                var rb = gameObject.GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+                Collider[] hits = Physics.OverlapSphere(transform.position, 10);
+                foreach (var hit in hits)
+                {
+                    if (hit.gameObject.GetComponent<Player>())
+                    {
+                        if(hit.gameObject.GetComponent<Player>() == Player.m_localPlayer) continue;
+                    }
+                    if (hit.gameObject.GetComponent<Rigidbody>())
+                    {
+                        this.transform.SetParent(hit.gameObject.transform);
+                    }
+                }
+
+                break;
+            }
+        }
+
         Trigger();
     }
 
@@ -49,6 +75,21 @@ public class BoomCountdown : MonoBehaviour, IProjectile
 
     public void Setup(Character owner, Vector3 velocity, float hitNoise, HitData hitData, ItemDrop.ItemData item, ItemDrop.ItemData ammo)
     {
+        switch (isSticky)
+        {
+            case true:
+                m_aoe_script.m_damage.m_chop = 15;
+                m_aoe_script.m_damage.m_blunt = 15;
+                m_aoe_script.m_damage.m_fire = 15;
+                m_aoe_script.m_useAttackSettings = true;
+                break;
+            case false:
+                m_aoe_script.m_damage.m_chop = 5;
+                m_aoe_script.m_damage.m_blunt = 5;
+                m_aoe_script.m_damage.m_fire = 15;
+                m_aoe_script.m_useAttackSettings = true;
+                break;
+        }
         if (m_aoe_script != null) m_aoe_script.Setup(owner, velocity, hitNoise, hitData, item, ammo);
     }
 

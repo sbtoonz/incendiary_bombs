@@ -198,6 +198,7 @@ MonoBehaviour:
   m_aoe_script: {fileID: 114582164009448917, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
   m_parent_projectile: {fileID: 114975480843404090, guid: f634d0b5c8c636d4c84e53c7c2a122d1, type: 3}
   m_snappable: {fileID: 7590507562099569926}
+  isSticky: 0
   m_timeout: 3
 --- !u!54 &4849139846925778378
 Rigidbody:
@@ -227,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 1214644819, guid: 1e5eba4f196255a48a608a7b9d58fac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_offset: 1
+  m_offset: 0.25
 --- !u!1 &6264515314737718189
 GameObject:
   m_ObjectHideFlags: 0

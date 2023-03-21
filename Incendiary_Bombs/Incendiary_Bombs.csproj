@@ -80,10 +80,19 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GamePath)\unstripped_corlib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>$(GamePath)\unstripped_corlib\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(GamePath)\unstripped_corlib\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\BoomCountdown.cs">
       <Link>MonoScripts\BoomCountdown.cs</Link>
+    </Compile>
+    <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\MoreDumbFixers.cs">
+      <Link>MonoScripts\MoreDumbFixers.cs</Link>
     </Compile>
     <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\PlaceSetter.cs">
       <Link>MonoScripts\PlaceSetter.cs</Link>
