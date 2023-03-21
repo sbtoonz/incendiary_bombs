@@ -2357,6 +2357,10 @@ GameObject:
   - component: {fileID: 4048619215067159}
   - component: {fileID: 114471572150435747}
   - component: {fileID: 114582164009448917}
+  - component: {fileID: 5235416936248269148}
+  - component: {fileID: 7327668385843714835}
+  - component: {fileID: 6334905021942803366}
+  - component: {fileID: 5615228152671122828}
   m_Layer: 22
   m_Name: incendiary_explosion
   m_TagString: Untagged
@@ -2461,6 +2465,58 @@ MonoBehaviour:
   m_hitEffects:
     m_effectPrefabs: []
   m_attachToCaster: 0
+--- !u!114 &5235416936248269148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163308556583957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec8c127078e7684abdb967170b60bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transformToSet: {fileID: 4788031698411996}
+--- !u!114 &7327668385843714835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163308556583957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec8c127078e7684abdb967170b60bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transformToSet: {fileID: 4968296034591599}
+--- !u!114 &6334905021942803366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163308556583957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec8c127078e7684abdb967170b60bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transformToSet: {fileID: 4511232705236611}
+--- !u!114 &5615228152671122828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163308556583957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec8c127078e7684abdb967170b60bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transformToSet: {fileID: 4447849519265646}
 --- !u!1 &1300897615157800
 GameObject:
   m_ObjectHideFlags: 0

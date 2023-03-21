@@ -11,6 +11,7 @@ public class BoomCountdown : MonoBehaviour, IProjectile
     [SerializeField] internal GameObject? m_aoe_explosion_prefab;
     [SerializeField] internal Aoe? m_aoe_script;
     [SerializeField] internal Projectile? m_parent_projectile;
+    [SerializeField] internal SnapToGround? m_snappable;
     public float m_timeout = 1f;
     
     private void Awake()
@@ -21,10 +22,11 @@ public class BoomCountdown : MonoBehaviour, IProjectile
     private void OnEnable()
     {
         if (m_aoe_explosion_prefab != null) m_aoe_script = m_aoe_explosion_prefab.GetComponent<Aoe>();
+        m_snappable.Snap();
         Trigger();
     }
 
-    public void Trigger() => InvokeRepeating("DestroyNow", m_timeout, 1f);
+    public void Trigger() => InvokeRepeating(nameof(DestroyNow), m_timeout, 1f);
 
     public void Trigger(float timeout) => InvokeRepeating("DestroyNow", timeout, 1f);
 
