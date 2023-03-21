@@ -29,8 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4968296034591599}
-  m_RootOrder: 0
+  m_Father: {fileID: 4167933978839642}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
 --- !u!198 &198575424148974237
 ParticleSystem:
@@ -2309,6 +2309,8 @@ Transform:
   - {fileID: 4447849519265646}
   - {fileID: 4781578367498664}
   - {fileID: 4272466874805200}
+  - {fileID: 4788031698411996}
+  - {fileID: 4968296034591599}
   - {fileID: 4511232705236611}
   - {fileID: 3518495559670216589}
   - {fileID: 6066767871057843210}
@@ -2323,8 +2325,8 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040747067077670}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 1.6596997, z: 0.003904581}
-  m_Size: 10.67981
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 19.796295
   m_FadeMode: 1
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
@@ -2332,13 +2334,13 @@ LODGroup:
   - screenRelativeHeight: 0.1994901
     fadeTransitionWidth: 0
     renderers:
-    - renderer: {fileID: 0}
     - renderer: {fileID: 199499120189485357}
     - renderer: {fileID: 199316089750690812}
     - renderer: {fileID: 199374531457038624}
     - renderer: {fileID: 199779245788383891}
     - renderer: {fileID: 199178138522541314}
-    - renderer: {fileID: 0}
+    - renderer: {fileID: 3603690720846055047}
+    - renderer: {fileID: 6261512143950728022}
   - screenRelativeHeight: 0.045836713
     fadeTransitionWidth: 0
     renderers:
@@ -7145,10 +7147,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4968296034591599}
+  m_Children: []
   m_Father: {fileID: 4167933978839642}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198955240802080671
 ParticleSystem:
@@ -7868,7 +7869,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -8172,7 +8173,7 @@ ParticleSystem:
     randomizePerFrame: 0
   ExternalForcesModule:
     serializedVersion: 2
-    enabled: 1
+    enabled: 0
     multiplierCurve:
       serializedVersion: 2
       minMaxState: 0
@@ -8848,7 +8849,7 @@ ParticleSystem:
     - {fileID: 0}
   SubModule:
     serializedVersion: 2
-    enabled: 1
+    enabled: 0
     subEmitters:
     - serializedVersion: 3
       emitter: {fileID: 198687493367734070}
@@ -9446,10 +9447,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4788031698411996}
-  m_Father: {fileID: 4511232705236611}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 4167933978839642}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198687493367734070
 ParticleSystem:
@@ -11127,7 +11127,7 @@ ParticleSystem:
     - {fileID: 0}
   SubModule:
     serializedVersion: 2
-    enabled: 1
+    enabled: 0
     subEmitters:
     - serializedVersion: 3
       emitter: {fileID: 198575424148974237}
@@ -11727,7 +11727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4167933978839642}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3604242601865852436
 ParticleSystem:
@@ -13919,7 +13919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4167933978839642}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6260084091878065501
 ParticleSystem:
