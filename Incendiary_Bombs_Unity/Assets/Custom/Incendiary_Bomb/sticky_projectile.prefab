@@ -2454,10 +2454,10 @@ MonoBehaviour:
   m_stayTTL: 3
   m_attachToRigidBody: 1
   m_attachToClosestBone: 1
-  m_attachPenetration: 0.5
-  m_attachBoneNearify: 0.25
+  m_attachPenetration: 0.125
+  m_attachBoneNearify: 0.075
   m_hideOnHit: {fileID: 0}
-  m_stopEmittersOnHit: 1
+  m_stopEmittersOnHit: 0
   m_hitEffects:
     m_effectPrefabs:
     - m_prefab: {fileID: 1145218154609666, guid: 77a265190345eb842a7376a1659d0548, type: 3}
