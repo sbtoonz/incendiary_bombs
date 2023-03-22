@@ -9,6 +9,7 @@ public class BoomCountdown : MonoBehaviour, IProjectile
 {
     private ZNetView? m_netview = null!;
     [SerializeField] internal GameObject? m_aoe_explosion_prefab;
+    [SerializeField] internal GameObject? terraform;
     [SerializeField] internal Aoe? m_aoe_script;
     [SerializeField] internal Projectile? m_parent_projectile;
     [SerializeField] internal SnapToGround? m_snappable;
@@ -65,12 +66,17 @@ public class BoomCountdown : MonoBehaviour, IProjectile
             if (!m_netview.IsValid() || !m_netview.IsOwner())
                 return;
             m_aoe_explosion_prefab = Instantiate(m_aoe_explosion_prefab, transform.position, transform.rotation);
+            terraform = Instantiate(terraform, transform.position, transform.rotation);
             ZNetScene.instance.Destroy(gameObject);
             
         }
         else
+        {
             m_aoe_explosion_prefab = Instantiate(m_aoe_explosion_prefab, transform.position, transform.rotation);
-        Destroy((Object) gameObject);
+            terraform = Instantiate(terraform, transform.position, transform.rotation);
+
+            Destroy((Object)gameObject);
+        }
     }
 
 

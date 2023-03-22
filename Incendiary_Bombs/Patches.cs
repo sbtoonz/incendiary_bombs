@@ -11,7 +11,7 @@ namespace Incendiary_Bombs
         {
             public static void Prefix(Projectile __instance)
             {
-                if (__instance.gameObject.name.StartsWith("sticky_projectile"))
+                if (__instance.gameObject.name.StartsWith("sticky_projectile") || __instance.gameObject.name.StartsWith("incendiary_projectile"))
                 {
                     __instance.m_aoe = 1;
                 }

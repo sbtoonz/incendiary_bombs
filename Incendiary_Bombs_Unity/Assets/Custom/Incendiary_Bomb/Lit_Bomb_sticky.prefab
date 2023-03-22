@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_persistent: 0
-  m_distant: 1
+  m_distant: 0
   m_type: 0
   m_syncInitialScale: 0
 --- !u!114 &5250467243604175028
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_aoe_explosion_prefab: {fileID: 1163308556583957, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
+  terraform: {fileID: 7974674741694366859, guid: ab80000ee393bc141a82d804b906dfb6, type: 3}
   m_aoe_script: {fileID: 114582164009448917, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
   m_parent_projectile: {fileID: 114975480843404090, guid: f634d0b5c8c636d4c84e53c7c2a122d1, type: 3}
   m_snappable: {fileID: 0}

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 5250467243604175028}
   - component: {fileID: 4849139846925778378}
   - component: {fileID: 7590507562099569926}
+  - component: {fileID: 946552786557788933}
   m_Layer: 0
   m_Name: Lit_Bomb
   m_TagString: Untagged
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_persistent: 0
-  m_distant: 1
+  m_distant: 0
   m_type: 0
   m_syncInitialScale: 0
 --- !u!114 &5250467243604175028
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_aoe_explosion_prefab: {fileID: 1163308556583957, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
+  terraform: {fileID: 7974674741694366859, guid: ab80000ee393bc141a82d804b906dfb6, type: 3}
   m_aoe_script: {fileID: 114582164009448917, guid: f26e9821d6b7a804fbcfbd8d61426cf4, type: 3}
   m_parent_projectile: {fileID: 114975480843404090, guid: f634d0b5c8c636d4c84e53c7c2a122d1, type: 3}
   m_snappable: {fileID: 7590507562099569926}
@@ -229,6 +231,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_offset: 0.25
+--- !u!114 &946552786557788933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251349219302613472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102bef3e297e4ca44beb3d592cdabc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers:
+  - {fileID: 5616264768017924728}
+  _shaderType: 4
+  DebugOutput: 0
 --- !u!1 &6264515314737718189
 GameObject:
   m_ObjectHideFlags: 0

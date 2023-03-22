@@ -38,15 +38,20 @@ namespace Incendiary_Bombs
             Item boomb = new("boombs", "BombIncendiary", "assets");
             boomb.Name.English("Incendiary Bomb");
             boomb.Description.English("A curious explosive device...");
-            boomb.Crafting.Add(CraftingTable.Workbench, 0);
-            boomb.RequiredItems.Add("Wood", 1);
+            boomb.Crafting.Add(CraftingTable.Workbench, 3);
+            boomb.RequiredItems.Add("ElderBark", 3);
+            boomb.RequiredItems.Add("Iron", 1);
+            boomb.RequiredItems.Add("SurtlingCore", 5);
             boomb.CraftAmount = 10;
 
             Item stick_boomb = new("boombs", "BombIncendiary_Sticky");
             stick_boomb.Name.English("Sticky Bomb");
             stick_boomb.Description.English("A sticky explosive device...");
-            stick_boomb.Crafting.Add(CraftingTable.Workbench,0);
-            stick_boomb.RequiredItems.Add("Wood", 1);
+            stick_boomb.Crafting.Add(CraftingTable.Workbench,3);
+            stick_boomb.RequiredItems.Add("ElderBark", 3);
+            stick_boomb.RequiredItems.Add("Iron", 1);
+            stick_boomb.RequiredItems.Add("SurtlingCore", 5);
+            stick_boomb.RequiredItems.Add("Resin", 2);
             stick_boomb.CraftAmount = 10;
             
             PrefabManager.RegisterPrefab("boombs", "incendiary_explosion");
@@ -54,6 +59,7 @@ namespace Incendiary_Bombs
             
             PrefabManager.RegisterPrefab("boombs", "sticky_projectile");
             PrefabManager.RegisterPrefab("boombs", "Lit_bomb");
+            PrefabManager.RegisterPrefab("boombs", "_terraform");
         }
     }
 }
