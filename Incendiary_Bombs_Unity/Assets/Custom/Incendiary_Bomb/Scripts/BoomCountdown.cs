@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 #nullable enable
 public class BoomCountdown : MonoBehaviour, IProjectile
@@ -13,7 +14,7 @@ public class BoomCountdown : MonoBehaviour, IProjectile
     [SerializeField] internal Aoe? m_aoe_script;
     [SerializeField] internal Projectile? m_parent_projectile;
     [SerializeField] internal SnapToGround? m_snappable;
-    [SerializeField] internal bool isSticky;
+    [SerializeField] internal bool isSticky = false;
     public float m_timeout = 1f;
     
     private void Awake()
@@ -66,19 +67,36 @@ public class BoomCountdown : MonoBehaviour, IProjectile
             if (!m_netview.IsValid() || !m_netview.IsOwner())
                 return;
             m_aoe_explosion_prefab = Instantiate(m_aoe_explosion_prefab, transform.position, transform.rotation);
-            terraform = Instantiate(terraform, transform.position, transform.rotation);
+            if(RollTheDice() > 6)terraform = Instantiate(terraform, transform.position, transform.rotation);
             ZNetScene.instance.Destroy(gameObject);
             
         }
         else
         {
             m_aoe_explosion_prefab = Instantiate(m_aoe_explosion_prefab, transform.position, transform.rotation);
-            terraform = Instantiate(terraform, transform.position, transform.rotation);
-
+            if(RollTheDice() > 6)terraform = Instantiate(terraform, transform.position, transform.rotation);
             Destroy((Object)gameObject);
         }
     }
 
+    private static int RollTheDice()
+    {
+
+        Random.InitState(Random.Range(0, 999999));
+        var randomDiceSide = 0;
+
+        var finalSide = 0;
+
+        for (var i = 0; i <= 20; i++)
+        {
+            randomDiceSide = Random.Range(0, 12);
+        }
+
+        finalSide = randomDiceSide + 1;
+
+        
+        return finalSide;
+    }
 
 
     public void Setup(Character owner, Vector3 velocity, float hitNoise, HitData hitData, ItemDrop.ItemData item, ItemDrop.ItemData ammo)
@@ -86,16 +104,24 @@ public class BoomCountdown : MonoBehaviour, IProjectile
         switch (isSticky)
         {
             case true:
-                m_aoe_script.m_damage.m_chop = 15;
-                m_aoe_script.m_damage.m_blunt = 15;
-                m_aoe_script.m_damage.m_fire = 15;
-                m_aoe_script.m_useAttackSettings = true;
+                if (m_aoe_script != null)
+                {
+                    m_aoe_script.m_damage.m_chop = 15;
+                    m_aoe_script.m_damage.m_blunt = 15;
+                    m_aoe_script.m_damage.m_fire = 15;
+                    m_aoe_script.m_useAttackSettings = true;
+                }
+
                 break;
             case false:
-                m_aoe_script.m_damage.m_chop = 5;
-                m_aoe_script.m_damage.m_blunt = 5;
-                m_aoe_script.m_damage.m_fire = 15;
-                m_aoe_script.m_useAttackSettings = true;
+                if (m_aoe_script != null)
+                {
+                    m_aoe_script.m_damage.m_chop = 5;
+                    m_aoe_script.m_damage.m_blunt = 5;
+                    m_aoe_script.m_damage.m_fire = 15;
+                    m_aoe_script.m_useAttackSettings = true;
+                }
+
                 break;
         }
         if (m_aoe_script != null) m_aoe_script.Setup(owner, velocity, hitNoise, hitData, item, ammo);

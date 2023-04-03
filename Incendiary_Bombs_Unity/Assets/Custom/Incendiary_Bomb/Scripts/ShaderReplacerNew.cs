@@ -23,7 +23,7 @@ enum ShaderType
     LitGui,
     LitParticles,
     MapShader,
-    ParticleDetail,
+    ParticleDecal,
     Piece,
     Player,
     Rug,
@@ -34,6 +34,7 @@ enum ShaderType
     Tar,
     TrilinearMap,
     BGBlur,
+    Vegetation,
     Water,
     WaterBottom,
     WaterMask,
@@ -45,13 +46,14 @@ enum ShaderType
 public class ShaderReplacerNew : MonoBehaviour
 {
     [Tooltip("Use this Field For Normal Renderers")] 
-    [SerializeField] internal Renderer[] _renderers = null!;
+    [SerializeField] internal List<Renderer> _renderers = new List<Renderer>();
     [SerializeField] internal ShaderType _shaderType = ShaderType.Creature;
+    [Tooltip("Use this to debug what gameobject is getting its shader replaced in case there is errors. TimedDestruction lower than 4 can cause the script to fail to run")]
     [SerializeField] internal bool DebugOutput = false;
     private void Awake()
     {
         if (IsHeadlessMode()) return;
-        if(_renderers.Length <=0) return;
+        if(_renderers.Count <=0) return;
         if(!this.gameObject.activeInHierarchy)return;
         foreach (var renderer in _renderers)
         {
@@ -125,44 +127,60 @@ public class ShaderReplacerNew : MonoBehaviour
             case ShaderType.MapShader:
                 s = "Custom/mapshader";
                 break;
-            case ShaderType.ParticleDetail:
+            case ShaderType.ParticleDecal:
                 s = "Custom/ParticleDecal";
                 break;
             case ShaderType.Piece:
                 s = "Custom/Piece";
                 break;
             case ShaderType.Player:
+                s = "Custom/Player";
                 break;
             case ShaderType.Rug:
+                s = "Custom/Rug";
                 break;
             case ShaderType.ShadowBlob:
+                s = "Custom/ShadowBlob";
                 break;
             case ShaderType.SkyboxProcedural:
+                s = "Custom/SkyboxProcedural";
                 break;
             case ShaderType.SkyObject:
+                s = "Custom/SkyObject";
                 break;
             case ShaderType.StaticRock:
+                s = "Custom/StaticRock";
                 break;
             case ShaderType.Tar:
+                s = "Custom/Tar";
                 break;
             case ShaderType.TrilinearMap:
+                s = "Custom/Trilinearmap";
                 break;
             case ShaderType.BGBlur:
+                s = "Custom/UI_BGBlur";
                 break;
             case ShaderType.Water:
+                s = "Custom/Water";
+                break;
+            case ShaderType.Vegetation:
+                s = "Custom/Vegetation";
                 break;
             case ShaderType.WaterBottom:
+                s = "Custom/WaterBottom";
                 break;
             case ShaderType.WaterMask:
+                s = "Custom/WaterMask";
                 break;
             case ShaderType.Yggdrasil:
+                s = "Custom/Yggdrasil";
                 break;
             case ShaderType.YggdrasilRoot:
+                s = "Custom/Yggdrasil_root";
                 break;
             case ShaderType.ToonDeferredShading2017:
+                s = "ToonDeferredShading2017";
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(shaderchoice), shaderchoice, null);
         }
         return s;
     }

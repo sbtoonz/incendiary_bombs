@@ -99,6 +99,7 @@ MonoBehaviour:
   _renderers:
   - {fileID: 23182165145823869}
   _shaderType: 4
+  DebugOutput: 0
 --- !u!114 &6874386916327742125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,7 +2474,6 @@ GameObject:
   - component: {fileID: 114618531469673879}
   - component: {fileID: 199417327732020627}
   - component: {fileID: 198757180215073145}
-  - component: {fileID: 729678856044393545}
   m_Layer: 12
   m_Name: BombIncendiary_Sticky
   m_TagString: Untagged
@@ -5116,19 +5116,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &729678856044393545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970116834525588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924c5f814fb20d1468491d08242a912f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_itemdrop: {fileID: 114618531469673879}
 --- !u!1 &1990150780692831
 GameObject:
   m_ObjectHideFlags: 0

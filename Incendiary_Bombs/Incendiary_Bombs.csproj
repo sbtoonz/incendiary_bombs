@@ -94,15 +94,6 @@
     <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\BoomCountdown.cs">
       <Link>MonoScripts\BoomCountdown.cs</Link>
     </Compile>
-    <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\MoreDumbFixers.cs">
-      <Link>MonoScripts\MoreDumbFixers.cs</Link>
-    </Compile>
-    <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\ParticleCollisionInstance.cs">
-      <Link>MonoScripts\ParticleCollisionInstance.cs</Link>
-    </Compile>
-    <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\ParticleCollisionSetter.cs">
-      <Link>MonoScripts\ParticleCollisionSetter.cs</Link>
-    </Compile>
     <Compile Include="..\Incendiary_Bombs_Unity\Assets\Custom\Incendiary_Bomb\Scripts\PlaceSetter.cs">
       <Link>MonoScripts\PlaceSetter.cs</Link>
     </Compile>
