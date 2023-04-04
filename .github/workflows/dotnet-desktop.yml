@@ -62,18 +62,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0
+        submodules: recursive
         
     - name: Install SteamCMD
       uses: CyberAndrii/setup-steamcmd@v1
       
-    - name: wget
-      uses: wei/wget@v1
-      with:
-        args:  -O bepinex.zip "https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.2101/
-      
     - name: move BePinEx
       run: |
+        wget -O bepinex.zip "https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.2101/
         tar -xf bepinex.zip
         steamcmd +force_install_dir /home/runner/.steam/steam/steamapps/common/Valheim +login anonymous +app_update 896660 validate +exit
 
