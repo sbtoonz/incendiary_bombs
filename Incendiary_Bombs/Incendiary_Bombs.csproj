@@ -101,6 +101,8 @@
       <Link>MonoScripts\ShaderReplacerNew.cs</Link>
     </Compile>
     <Compile Include="ModCore.cs" />
+    <Compile Include="MonoScripts\CaughtFire.cs" />
+    <Compile Include="MonoScripts\ParticleCollisionSetter.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

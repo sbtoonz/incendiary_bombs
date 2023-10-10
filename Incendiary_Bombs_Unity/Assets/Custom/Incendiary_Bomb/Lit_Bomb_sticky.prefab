@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7126631718393506451}
   - component: {fileID: 4650124185962238924}
   - component: {fileID: 2414945964587937794}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pointlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: -318806891736996095}
   - component: {fileID: 5250467243604175028}
   - component: {fileID: 4849139846925778378}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Lit_Bomb_sticky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_syncPosition: 1
   m_syncRotation: 1
   m_syncScale: 0
-  m_syncBodyVelocity: 0
+  m_syncBodyVelocity: 1
   m_characterParentSync: 0
 --- !u!114 &-318806891736996095
 MonoBehaviour:
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 7643747958924572338}
   - component: {fileID: 5616264768017924728}
   - component: {fileID: 3869835607241457175}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 7330821817831438457}
   - component: {fileID: 1996105684535540982}
   - component: {fileID: 8184906341296977988}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LitWick
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,7 +2,7 @@
  "name": "IncendiaryBombs",
   "author": "OdinPlus",
   "description": "A set of very high tech explosives",
-  "version_number": "1.0.0",
+  "version_number": "1.0.2",
   "website_url": "https://www.littleroom.dev/",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2100"

@@ -11,10 +11,10 @@ namespace Incendiary_Bombs
     public class IncendiaryBombs : BaseUnityPlugin
     {
         private const string ModName = "IncendiaryBombs";
-        internal const string ModVersion = "0.0.1";
+        internal const string ModVersion = "1.0.2";
         private const string ModGUID = "com.littleroomdev.IncendiaryBombs";
         private static Harmony harmony = null!;
-        private ConfigEntry<bool> Test;
+        private ConfigEntry<int> TimeToWait;
         public void Awake()
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
@@ -46,7 +46,7 @@ namespace Incendiary_Bombs
             PrefabManager.RegisterPrefab("boombs", "sticky_projectile");
             PrefabManager.RegisterPrefab("boombs", "Lit_bomb");
             PrefabManager.RegisterPrefab("boombs", "_terraform");
-            
+
         }
     }
 }
